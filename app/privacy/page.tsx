@@ -50,10 +50,10 @@ export default function PrivacyPage() {
       <p className="mt-3 leading-relaxed text-slate-700">
         Questions about this policy:{" "}
         <a
-          href="mailto:contact@hireskys.com"
+          href="mailto:contact@fedtalentusa.com"
           className="text-blue-700 hover:underline"
         >
-          contact@hireskys.com
+          contact@fedtalentusa.com
         </a>
         .
       </p>

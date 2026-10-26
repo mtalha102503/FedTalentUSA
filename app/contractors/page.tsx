@@ -37,7 +37,7 @@ export default async function ContractorsPage() {
         trend, agency/state/industry splits and contract awards.
       </p>
       <div className="mt-6">
-        <RankingTable entries={index} />
+        <RankingTable entries={index} pageSize={50} />
       </div>
       <p className="mt-4 text-xs text-slate-500">
         Source: USAspending.gov. Totals are contract obligations; see{" "}

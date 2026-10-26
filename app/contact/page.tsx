@@ -25,10 +25,10 @@ export default function ContactPage() {
       </p>
       <p className="mt-4">
         <a
-          href="mailto:contact@hireskys.com"
+          href="mailto:contact@fedtalentusa.com"
           className="text-lg font-semibold text-blue-700 hover:underline"
         >
-          contact@hireskys.com
+          contact@fedtalentusa.com
         </a>
       </p>
       <p className="mt-4 leading-relaxed text-slate-700">

@@ -85,11 +85,9 @@ export async function getContractor(slug: string): Promise<Contractor | null> {
 
 // ---- formatting helpers ----
 
-// Full USD figure, e.g. $64,725,692,748. Negative values keep their sign.
-export function formatUSD(n: number): string {
-  const sign = n < 0 ? "-" : "";
-  return `${sign}$${Math.round(Math.abs(n)).toLocaleString("en-US")}`;
-}
+// Display formatters live in lib/format.ts (client-safe, no Node APIs).
+// Server components keep importing them from here via re-export.
+export { displayName, formatUSD } from "./format";
 
 // Compact figure for hero stats, e.g. $64.73B / $48.19M / $512.40K.
 export function formatUSDCompact(n: number): string {
@@ -99,16 +97,6 @@ export function formatUSDCompact(n: number): string {
   if (a >= 1_000_000) return `${sign}$${(a / 1_000_000).toFixed(2)}M`;
   if (a >= 1_000) return `${sign}$${(a / 1_000).toFixed(2)}K`;
   return `${sign}$${a.toFixed(2)}`;
-}
-
-// USAspending stores legal names in ALL CAPS. Display them title-cased.
-// This is a mechanical display transform only; the stored name is unchanged.
-export function displayName(name: string): string {
-  return name
-    .toLowerCase()
-    .split(" ")
-    .map((w) => (w ? w[0].toUpperCase() + w.slice(1) : w))
-    .join(" ");
 }
 
 // SAM.gov business-type codes are snake_case; render them readable.

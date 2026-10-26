@@ -91,10 +91,10 @@ export default function AboutPage() {
         </a>{" "}
         company. Questions or data corrections:{" "}
         <a
-          href="mailto:contact@hireskys.com"
+          href="mailto:contact@fedtalentusa.com"
           className="text-blue-700 hover:underline"
         >
-          contact@hireskys.com
+          contact@fedtalentusa.com
         </a>
         .
       </p>

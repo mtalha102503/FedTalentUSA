@@ -124,7 +124,7 @@ export default async function HomePage() {
         </div>
 
         <h2 className="mt-12 text-2xl font-bold text-slate-900">
-          Top 1,000 federal contractors by FY2025 contract value
+          Top 50 federal contractors by FY2025 contract value
         </h2>
         <p className="mt-2 max-w-3xl text-sm text-slate-600">
           Ranked by each company&apos;s total federal contract obligations in
@@ -133,7 +133,15 @@ export default async function HomePage() {
           trend, agency/state/industry splits and contract awards.
         </p>
         <div className="mt-5">
-          <RankingTable entries={index} />
+          <RankingTable entries={index.slice(0, 50)} />
+        </div>
+        <div className="mt-6 text-center">
+          <Link
+            href="/contractors"
+            className="inline-block rounded-lg bg-[#2f6df6] px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700"
+          >
+            View all 1,000 contractors
+          </Link>
         </div>
         <p className="mt-4 text-xs text-slate-500">
           Source: USAspending.gov, the official source for U.S. federal

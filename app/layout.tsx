@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
+import Navbar from "./Navbar";
 
 export const metadata: Metadata = {
   title: {
@@ -33,32 +34,6 @@ export const metadata: Metadata = {
     },
   },
 };
-
-function Header() {
-  return (
-    <header className="border-b border-slate-200 bg-white">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-        <Link href="/" className="text-lg font-bold text-slate-900">
-          FedTalent<span className="text-blue-600">USA</span>
-        </Link>
-        <nav className="flex gap-5 text-sm font-medium text-slate-600">
-          <Link href="/" className="hover:text-blue-700">
-            Home
-          </Link>
-          <Link href="/contractors" className="hover:text-blue-700">
-            Contractors
-          </Link>
-          <Link href="/about" className="hover:text-blue-700">
-            About
-          </Link>
-          <Link href="/contact" className="hover:text-blue-700">
-            Contact
-          </Link>
-        </nav>
-      </div>
-    </header>
-  );
-}
 
 function Footer() {
   return (
@@ -114,10 +89,10 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:contact@hireskys.com"
+                  href="mailto:contact@fedtalentusa.com"
                   className="hover:text-blue-700"
                 >
-                  contact@hireskys.com
+                  contact@fedtalentusa.com
                 </a>
               </li>
             </ul>
@@ -150,9 +125,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <Header />
-        <main>{children}</main>
+      <body className="flex min-h-screen flex-col">
+        <Navbar />
+        <main className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>

@@ -57,7 +57,7 @@ function StatCard({ label, value, sub }: { label: string; value: string; sub?: s
   return (
     <div className="rounded-lg border border-slate-200 bg-white p-5">
       <p className="text-sm text-slate-500">{label}</p>
-      <p className="mt-1 text-2xl font-bold tabular-nums text-slate-900">{value}</p>
+      <p className="mt-1 break-words text-2xl font-bold tabular-nums text-slate-900">{value}</p>
       {sub && <p className="mt-1 text-xs text-slate-500">{sub}</p>}
     </div>
   );
@@ -73,11 +73,11 @@ function SplitTable({ title, rows }: { title: string; rows: SplitEntry[] }) {
         </p>
       ) : (
         <div className="mt-3 overflow-x-auto rounded-lg border border-slate-200">
-          <table className="w-full min-w-[480px] text-left text-sm">
+          <table className="w-full text-left text-sm">
             <tbody>
               {rows.map((r) => (
                 <tr key={`${r.name}-${r.code ?? ""}`} className="border-b border-slate-100 last:border-0">
-                  <td className="px-4 py-2.5 text-slate-800">
+                  <td className="break-words px-4 py-2.5 text-slate-800">
                     {r.name}
                     {r.code ? (
                       <span className="ml-2 text-xs text-slate-400">{r.code}</span>
@@ -200,53 +200,49 @@ export default async function ContractorPage({
       </div>
 
       <h2 className="mt-10 text-2xl font-bold text-slate-900">Company profile</h2>
-      <div className="mt-4 overflow-x-auto rounded-lg border border-slate-200">
-        <table className="w-full min-w-[480px] text-left text-sm">
-          <tbody>
-            <tr className="border-b border-slate-100">
-              <td className="px-4 py-2.5 font-medium text-slate-500">Legal name (as listed)</td>
-              <td className="px-4 py-2.5 text-slate-900">{c.name}</td>
-            </tr>
-            <tr className="border-b border-slate-100">
-              <td className="px-4 py-2.5 font-medium text-slate-500">UEI</td>
-              <td className="px-4 py-2.5 tabular-nums text-slate-900">{c.uei ?? "Not listed"}</td>
-            </tr>
-            <tr className="border-b border-slate-100">
-              <td className="px-4 py-2.5 font-medium text-slate-500">DUNS</td>
-              <td className="px-4 py-2.5 tabular-nums text-slate-900">{c.duns ?? "Not listed"}</td>
-            </tr>
-            <tr className="border-b border-slate-100">
-              <td className="px-4 py-2.5 font-medium text-slate-500">Headquarters</td>
-              <td className="px-4 py-2.5 text-slate-900">{hq ?? "Not listed"}</td>
-            </tr>
-            <tr>
-              <td className="px-4 py-2.5 align-top font-medium text-slate-500">Business types</td>
-              <td className="px-4 py-2.5 text-slate-900">
-                {c.business_types.length === 0 ? (
-                  "Not listed"
-                ) : (
-                  <span className="flex flex-wrap gap-1.5">
-                    {c.business_types.map((t) => (
-                      <span
-                        key={t}
-                        className="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs text-slate-700"
-                      >
-                        {displayBusinessType(t)}
-                      </span>
-                    ))}
+      <dl className="mt-4 divide-y divide-slate-100 rounded-lg border border-slate-200 text-sm">
+        <div className="grid gap-0.5 px-4 py-2.5 sm:grid-cols-[180px_1fr] sm:gap-4">
+          <dt className="font-medium text-slate-500">Legal name (as listed)</dt>
+          <dd className="break-words text-slate-900">{c.name}</dd>
+        </div>
+        <div className="grid gap-0.5 px-4 py-2.5 sm:grid-cols-[180px_1fr] sm:gap-4">
+          <dt className="font-medium text-slate-500">UEI</dt>
+          <dd className="break-words tabular-nums text-slate-900">{c.uei ?? "Not listed"}</dd>
+        </div>
+        <div className="grid gap-0.5 px-4 py-2.5 sm:grid-cols-[180px_1fr] sm:gap-4">
+          <dt className="font-medium text-slate-500">DUNS</dt>
+          <dd className="break-words tabular-nums text-slate-900">{c.duns ?? "Not listed"}</dd>
+        </div>
+        <div className="grid gap-0.5 px-4 py-2.5 sm:grid-cols-[180px_1fr] sm:gap-4">
+          <dt className="font-medium text-slate-500">Headquarters</dt>
+          <dd className="break-words text-slate-900">{hq ?? "Not listed"}</dd>
+        </div>
+        <div className="grid gap-0.5 px-4 py-2.5 sm:grid-cols-[180px_1fr] sm:gap-4">
+          <dt className="font-medium text-slate-500">Business types</dt>
+          <dd className="text-slate-900">
+            {c.business_types.length === 0 ? (
+              "Not listed"
+            ) : (
+              <span className="flex flex-wrap gap-1.5">
+                {c.business_types.map((t) => (
+                  <span
+                    key={t}
+                    className="break-words rounded-full bg-slate-100 px-2.5 py-0.5 text-xs text-slate-700"
+                  >
+                    {displayBusinessType(t)}
                   </span>
-                )}
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+                ))}
+              </span>
+            )}
+          </dd>
+        </div>
+      </dl>
 
       <h2 className="mt-10 text-2xl font-bold text-slate-900">
         Contract value trend, FY2023 – FY2025
       </h2>
       <div className="mt-4 overflow-x-auto rounded-lg border border-slate-200">
-        <table className="w-full min-w-[480px] text-left text-sm">
+        <table className="w-full text-left text-sm">
           <thead>
             <tr className="border-b border-slate-200 bg-slate-50 text-xs uppercase tracking-wide text-slate-500">
               <th className="px-4 py-3 font-semibold">Fiscal year</th>
