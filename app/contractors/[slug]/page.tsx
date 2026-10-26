@@ -65,7 +65,7 @@ function StatCard({ label, value, sub }: { label: string; value: string; sub?: s
 
 function SplitTable({ title, rows }: { title: string; rows: SplitEntry[] }) {
   return (
-    <div>
+    <div className="min-w-0">
       <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
       {rows.length === 0 ? (
         <p className="mt-2 text-sm text-slate-500">
@@ -301,38 +301,74 @@ export default async function ContractorPage({
           No individual awards listed for this contractor in the FY2025 data.
         </p>
       ) : (
-        <div className="mt-4 overflow-x-auto rounded-lg border border-slate-200">
-          <table className="w-full min-w-[820px] text-left text-sm">
-            <thead>
-              <tr className="border-b border-slate-200 bg-slate-50 text-xs uppercase tracking-wide text-slate-500">
-                <th className="px-4 py-3 font-semibold">Award ID</th>
-                <th className="px-4 py-3 text-right font-semibold">Amount</th>
-                <th className="px-4 py-3 font-semibold">Awarding agency</th>
-                <th className="px-4 py-3 font-semibold">Description</th>
-                <th className="px-4 py-3 font-semibold">Start date</th>
-                <th className="px-4 py-3 font-semibold">NAICS</th>
-                <th className="px-4 py-3 font-semibold">PSC</th>
-                <th className="px-4 py-3 font-semibold">Place</th>
-              </tr>
-            </thead>
-            <tbody>
-              {c.awards.map((a) => (
-                <tr key={a.award_id} className="border-b border-slate-100 last:border-0">
-                  <td className="px-4 py-2.5 tabular-nums text-slate-800">{a.award_id}</td>
-                  <td className="px-4 py-2.5 text-right tabular-nums font-medium text-slate-900">
-                    {a.amount != null ? formatUSD(a.amount) : "—"}
-                  </td>
-                  <td className="px-4 py-2.5 text-slate-600">{a.agency ?? "—"}</td>
-                  <td className="px-4 py-2.5 text-slate-600">{a.description ?? "—"}</td>
-                  <td className="px-4 py-2.5 whitespace-nowrap text-slate-600">{displayDate(a.date)}</td>
-                  <td className="px-4 py-2.5 tabular-nums text-slate-600">{a.naics_code ?? "—"}</td>
-                  <td className="px-4 py-2.5 tabular-nums text-slate-600">{a.psc_code ?? "—"}</td>
-                  <td className="px-4 py-2.5 text-slate-600">{a.place_state ?? "—"}</td>
+        <>
+          <div className="mt-4 hidden overflow-x-auto rounded-lg border border-slate-200 md:block">
+            <table className="w-full min-w-[820px] text-left text-sm">
+              <thead>
+                <tr className="border-b border-slate-200 bg-slate-50 text-xs uppercase tracking-wide text-slate-500">
+                  <th className="px-4 py-3 font-semibold">Award ID</th>
+                  <th className="px-4 py-3 text-right font-semibold">Amount</th>
+                  <th className="px-4 py-3 font-semibold">Awarding agency</th>
+                  <th className="px-4 py-3 font-semibold">Description</th>
+                  <th className="px-4 py-3 font-semibold">Start date</th>
+                  <th className="px-4 py-3 font-semibold">NAICS</th>
+                  <th className="px-4 py-3 font-semibold">PSC</th>
+                  <th className="px-4 py-3 font-semibold">Place</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+              </thead>
+              <tbody>
+                {c.awards.map((a) => (
+                  <tr key={a.award_id} className="border-b border-slate-100 last:border-0">
+                    <td className="px-4 py-2.5 tabular-nums text-slate-800">{a.award_id}</td>
+                    <td className="px-4 py-2.5 text-right tabular-nums font-medium text-slate-900">
+                      {a.amount != null ? formatUSD(a.amount) : "—"}
+                    </td>
+                    <td className="px-4 py-2.5 text-slate-600">{a.agency ?? "—"}</td>
+                    <td className="px-4 py-2.5 text-slate-600">{a.description ?? "—"}</td>
+                    <td className="px-4 py-2.5 whitespace-nowrap text-slate-600">{displayDate(a.date)}</td>
+                    <td className="px-4 py-2.5 tabular-nums text-slate-600">{a.naics_code ?? "—"}</td>
+                    <td className="px-4 py-2.5 tabular-nums text-slate-600">{a.psc_code ?? "—"}</td>
+                    <td className="px-4 py-2.5 text-slate-600">{a.place_state ?? "—"}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-4 space-y-3 md:hidden">
+            {c.awards.map((a) => (
+              <div key={a.award_id} className="rounded-lg border border-slate-200 bg-white p-4">
+                <p className="break-all text-sm font-medium tabular-nums text-slate-900">{a.award_id}</p>
+                <p className="mt-1 text-lg font-bold tabular-nums text-slate-900">
+                  {a.amount != null ? formatUSD(a.amount) : "—"}
+                </p>
+                <p className="mt-2 text-sm text-slate-600">
+                  <span className="text-slate-500">Awarding agency: </span>
+                  {a.agency ?? "—"}
+                </p>
+                <p className="mt-1 text-sm text-slate-600">
+                  <span className="text-slate-500">Description: </span>
+                  {a.description ?? "—"}
+                </p>
+                <p className="mt-1 text-sm text-slate-600">
+                  <span className="text-slate-500">Start date: </span>
+                  {displayDate(a.date)}
+                </p>
+                <p className="mt-1 text-sm text-slate-600">
+                  <span className="text-slate-500">NAICS: </span>
+                  {a.naics_code ?? "—"}
+                </p>
+                <p className="mt-1 text-sm text-slate-600">
+                  <span className="text-slate-500">PSC: </span>
+                  {a.psc_code ?? "—"}
+                </p>
+                <p className="mt-1 text-sm text-slate-600">
+                  <span className="text-slate-500">Place: </span>
+                  {a.place_state ?? "—"}
+                </p>
+              </div>
+            ))}
+          </div>
+        </>
       )}
 
       <p className="mt-8 text-xs text-slate-500">
