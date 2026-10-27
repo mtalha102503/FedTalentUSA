@@ -44,6 +44,184 @@ const selectClass =
 const labelClass =
   "block text-xs font-semibold uppercase tracking-wide text-slate-500";
 
+
+function FinderGuidance() {
+  return (
+    <div className="mt-6 space-y-6">
+      <div className="rounded-lg border border-slate-200 bg-white p-5">
+        <h2 className="text-lg font-semibold text-slate-900">
+          What this finder is
+        </h2>
+        <p className="mt-2 text-sm leading-relaxed text-slate-600">
+          This finder filters the site&apos;s Top 1,000 federal contractors,
+          ranked by their prime contract obligations in FY2025. It lets you
+          slice that ranking — by where the work was performed, which agency
+          bought it, what industry it falls under, or set-aside status — and
+          then open any company for its full profile. It is not a search of
+          the whole SAM database: only the 1,000 companies in this ranking
+          can appear here.
+        </p>
+      </div>
+
+      <div className="rounded-lg border border-slate-200 bg-white p-5">
+        <h2 className="text-lg font-semibold text-slate-900">
+          How to use each filter
+        </h2>
+        <p className="mt-2 text-sm leading-relaxed text-slate-600">
+          Filters combine: a company must match every filter you set. Leave
+          a filter blank to ignore it. Results appear as soon as you set
+          anything; clearing everything brings this guide back.
+        </p>
+        <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-slate-700">
+          <li>
+            <span className="font-medium text-slate-900">Company name</span>{" "}
+            — substring match on the company name. Type part of a name, for
+            example “Lockheed”, to narrow the ranking to matching companies.
+          </li>
+          <li>
+            <span className="font-medium text-slate-900">
+              State (place of performance)
+            </span>{" "}
+            — the state where the contract work was performed, not the
+            company&apos;s headquarters state. A company headquartered in one
+            state can appear under several states.
+          </li>
+          <li>
+            <span className="font-medium text-slate-900">Agency</span> — the
+            awarding agency: the federal agency that obligated the contract
+            dollars.
+          </li>
+          <li>
+            <span className="font-medium text-slate-900">
+              NAICS industry
+            </span>{" "}
+            — the industry code and name describing what the contractor
+            does, for example 336411 — Aircraft Manufacturing.
+          </li>
+          <li>
+            <span className="font-medium text-slate-900">
+              PSC product / service
+            </span>{" "}
+            — the product or service code describing what was bought, for
+            example 1510 — Aircraft, Fixed Wing.
+          </li>
+          <li>
+            <span className="font-medium text-slate-900">
+              Set-aside status
+            </span>{" "}
+            — checkboxes for Small business, Women-owned (WOSB), 8(a)
+            program participant, Service-disabled veteran-owned (SDVOSB),
+            Veteran-owned, and Self-certified small disadvantaged. Checking
+            more than one box shows companies holding any of them.
+          </li>
+        </ul>
+      </div>
+
+      <div className="rounded-lg border border-slate-200 bg-white p-5">
+        <h2 className="text-lg font-semibold text-slate-900">
+          What each result column means
+        </h2>
+        <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-slate-700">
+          <li>
+            <span className="font-medium text-slate-900">Rank</span> — the
+            company&apos;s position in the FY2025 ranking. Rank 1 is the
+            largest FY2025 total.
+          </li>
+          <li>
+            <span className="font-medium text-slate-900">Contractor</span> —
+            click the name to open the company&apos;s full profile.
+          </li>
+          <li>
+            <span className="font-medium text-slate-900">
+              FY2025 contract value
+            </span>{" "}
+            — prime contract obligations in FY2025.
+          </li>
+          <li>
+            <span className="font-medium text-slate-900">HQ state</span> —
+            the headquarters state, shown separately from place of
+            performance. A dash means it is not listed for that company.
+          </li>
+          <li>
+            <span className="font-medium text-slate-900">
+              Top agency (FY2025)
+            </span>{" "}
+            — the company&apos;s largest awarding agency by FY2025
+            obligations.
+          </li>
+        </ul>
+      </div>
+
+      <div className="rounded-lg border border-slate-200 bg-white p-5">
+        <h2 className="text-lg font-semibold text-slate-900">
+          What to do with a result
+        </h2>
+        <p className="mt-2 text-sm leading-relaxed text-slate-600">
+          Click any contractor to open its full profile: a three-year trend
+          (FY2023–FY2025), its agency, state, NAICS and PSC splits, and up
+          to 20 individual awards with activity in FY2025. Use the finder to
+          build a shortlist — for example, every company doing aircraft work
+          for one agency — then read the profiles to compare them.
+        </p>
+      </div>
+
+      <div className="rounded-lg border border-amber-200 bg-amber-50 p-5">
+        <h2 className="text-lg font-semibold text-slate-900">
+          Scope and limits
+        </h2>
+        <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-slate-700">
+          <li>
+            Covers the site&apos;s Top 1,000 contractors only (FY2025
+            ranking) — not the whole SAM database.
+          </li>
+          <li>
+            State means place of performance (where the work was
+            performed), not headquarters state. HQ state is shown
+            separately.
+          </li>
+          <li>
+            Set-aside lists undercount: 198 of the 1,000 companies have no
+            business-type flags on file, so they never appear under any
+            set-aside filter.
+          </li>
+          <li>
+            FY2025 (Oct 1, 2024 – Sep 30, 2025) is the latest complete
+            fiscal year.
+          </li>
+          <li>
+            No HUBZone filter is offered, because no confirmed HUBZone flag
+            exists in the data.
+          </li>
+        </ul>
+      </div>
+
+      <div className="rounded-lg border border-slate-200 bg-white p-5">
+        <h2 className="text-lg font-semibold text-slate-900">
+          Try these searches
+        </h2>
+        <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-slate-700">
+          <li>
+            Set <span className="font-medium text-slate-900">State</span> to
+            Virginia to see which top contractors perform work there.
+          </li>
+          <li>
+            Set <span className="font-medium text-slate-900">NAICS</span> to
+            336411 — Aircraft Manufacturing to see the aircraft builders in
+            the ranking.
+          </li>
+          <li>
+            Check{" "}
+            <span className="font-medium text-slate-900">
+              8(a) program participant
+            </span>{" "}
+            to see the 8(a) companies in the Top 1,000.
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
 export default function FinderClient({
   entries,
   options,
@@ -211,6 +389,10 @@ export default function FinderClient({
         </fieldset>
       </div>
 
+      {!hasFilters ? (
+        <FinderGuidance />
+      ) : (
+        <>
       <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
         <p className="text-sm text-slate-500">
           Showing {filtered.length.toLocaleString("en-US")} of{" "}
@@ -225,6 +407,9 @@ export default function FinderClient({
           Clear filters
         </button>
       </div>
+      <p className="mt-3 text-xs text-slate-500">
+        Top 1,000 only — FY2025 ranking; State = place of performance.
+      </p>
 
       {filtered.length === 0 ? (
         <div className="mt-4 rounded-lg border border-slate-200 bg-white p-6 text-center">
@@ -287,6 +472,8 @@ export default function FinderClient({
             </tbody>
           </table>
         </div>
+      )}
+        </>
       )}
     </div>
   );
