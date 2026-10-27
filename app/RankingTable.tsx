@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { displayName, formatUSD } from "@/lib/format";
+import { displayCompanyName, formatUSD, isAggregateRow } from "@/lib/format";
 import type { IndexEntry } from "@/lib/data";
 
 // Ranking table shared by the homepage and /contractors.
@@ -59,8 +59,13 @@ export default function RankingTable({
                     href={`/contractors/${e.slug}`}
                     className="text-blue-700 hover:underline"
                   >
-                    {displayName(e.name)}
+                    {displayCompanyName(e.name)}
                   </Link>
+                  {isAggregateRow(e.name) && (
+                    <span className="ml-2 rounded bg-slate-100 px-1.5 py-0.5 text-[11px] font-semibold text-slate-500">
+                      Aggregate
+                    </span>
+                  )}
                 </td>
                 <td className="px-4 py-3 text-right tabular-nums font-medium text-slate-900">
                   {formatUSD(e.fy2025)}

@@ -16,3 +16,29 @@ export function displayName(name: string): string {
     .map((w) => (w ? w[0].toUpperCase() + w.slice(1) : w))
     .join(" ");
 }
+
+// USAspending recipient IDs double as the display name when no company name
+// is on file: a UUID-style hash with a -P level suffix. Show an honest
+// fallback instead of the raw identifier; the slug (profile link) is unchanged.
+const RECIPIENT_HASH_PATTERN =
+  /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}-p$/i;
+
+export function isUnnamedRecipient(name: string): boolean {
+  return RECIPIENT_HASH_PATTERN.test(name.trim());
+}
+
+export function displayCompanyName(name: string): string {
+  return isUnnamedRecipient(name)
+    ? "Unnamed recipient (USAspending record)"
+    : displayName(name);
+}
+
+// Ranked rows that are not single companies: one undisclosed grouping and
+// government recipients in USAspending. Marked "Aggregate" in tables.
+export function isAggregateRow(name: string): boolean {
+  const n = name.trim();
+  return (
+    n.toUpperCase().startsWith("GOVERNMENT OF ") ||
+    /\(UNDISCLOSED\)/i.test(n)
+  );
+}

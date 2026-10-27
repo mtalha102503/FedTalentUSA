@@ -3,9 +3,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import {
   displayBusinessType,
+  displayCompanyName,
   displayDate,
   displayHQ,
-  displayName,
   formatUSD,
   getContractor,
   getIndex,
@@ -31,7 +31,7 @@ export async function generateMetadata({
   const rank = index.find((e) => e.slug === slug)?.rank ?? null;
   const fy2025 = c.years["2025"] ?? 0;
   const topAgency = c.splits.agencies.length > 0 ? c.splits.agencies[0].name : null;
-  const name = displayName(c.name);
+  const name = displayCompanyName(c.name);
   const title = `${name} Federal Contracts & Awards`;
   const description =
     `${name} received ${formatUSD(fy2025)} in federal contract obligations ` +
@@ -106,7 +106,7 @@ export default async function ContractorPage({
   if (!c) notFound();
   const index = await getIndex();
   const rank = index.find((e) => e.slug === slug)?.rank ?? null;
-  const name = displayName(c.name);
+  const name = displayCompanyName(c.name);
   const hq = displayHQ(c);
   const fy2025 = c.years["2025"] ?? 0;
   const fy2024 = c.years["2024"];
@@ -370,6 +370,12 @@ export default async function ContractorPage({
           </div>
         </>
       )}
+      {c.awards.length > 0 &&
+        c.awards.every((a) => a.naics_code == null && a.psc_code == null) && (
+          <p className="mt-4 text-sm text-slate-500">
+            NAICS and PSC are not reported for these awards in USAspending.
+          </p>
+        )}
 
       <p className="mt-8 text-xs text-slate-500">
         Source: USAspending.gov. Company totals are sums of all contract

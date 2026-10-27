@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { displayName, formatUSD } from "@/lib/format";
+import { displayCompanyName, formatUSD, isAggregateRow } from "@/lib/format";
 
 // Compact per-company record for the finder. Filter keys are codes/names
 // only (no amounts); the full splits live on each company profile page.
@@ -191,6 +191,22 @@ function FinderGuidance() {
           <li>
             No HUBZone filter is offered, because no confirmed HUBZone flag
             exists in the data.
+          </li>
+          <li>
+            The same legal name can appear more than once: USAspending keeps
+            separate parent records for the same name (10 names appear on
+            2–9 rows each), and each record has its own ranking, trend and
+            awards. Click through to a profile to see which record it is.
+          </li>
+          <li>
+            3 ranked rows are not single companies — one undisclosed
+            grouping and two government recipients — and are marked
+            Aggregate in the table.
+          </li>
+          <li>
+            6 ranked rows have no company name on file in USAspending; they
+            are shown as “Unnamed recipient (USAspending record)” and still
+            link to their full profiles.
           </li>
         </ul>
       </div>
@@ -455,8 +471,13 @@ export default function FinderClient({
                       href={`/contractors/${e.slug}`}
                       className="text-blue-700 hover:underline"
                     >
-                      {displayName(e.name)}
+                      {displayCompanyName(e.name)}
                     </Link>
+                    {isAggregateRow(e.name) && (
+                      <span className="ml-2 rounded bg-slate-100 px-1.5 py-0.5 text-[11px] font-semibold text-slate-500">
+                        Aggregate
+                      </span>
+                    )}
                   </td>
                   <td className="px-4 py-3 text-right tabular-nums font-medium text-slate-900">
                     {formatUSD(e.fy2025)}

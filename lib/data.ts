@@ -87,7 +87,13 @@ export async function getContractor(slug: string): Promise<Contractor | null> {
 
 // Display formatters live in lib/format.ts (client-safe, no Node APIs).
 // Server components keep importing them from here via re-export.
-export { displayName, formatUSD } from "./format";
+export {
+  displayCompanyName,
+  displayName,
+  formatUSD,
+  isAggregateRow,
+  isUnnamedRecipient,
+} from "./format";
 
 // Compact figure for hero stats, e.g. $64.73B / $48.19M / $512.40K.
 export function formatUSDCompact(n: number): string {
