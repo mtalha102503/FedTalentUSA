@@ -123,6 +123,27 @@ export default async function HomePage() {
           </a>
         </div>
 
+        <div className="mt-6 rounded-lg border border-slate-200 bg-white p-5">
+          <p className="text-xs font-semibold uppercase tracking-wide text-blue-600">
+            From the FedTalentUSA blog
+          </p>
+          <p className="mt-2 font-semibold text-slate-900">
+            Top Federal Contractors: The FY2025 Ranking by Real Contract Data
+          </p>
+          <p className="mt-1 text-sm text-slate-600">
+            The 1,000 largest U.S. federal contractors by FY2025 contract
+            obligations — Lockheed Martin leads at $64.73 billion, the top
+            1,000 total $554.25 billion, and the Department of Defense
+            accounts for 61.5% of it.
+          </p>
+          <Link
+            href="/blog/top-federal-contractors"
+            className="mt-3 inline-block rounded-lg bg-[#2f6df6] px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"
+          >
+            Read the guide →
+          </Link>
+        </div>
+
         <h2 className="mt-12 text-2xl font-bold text-slate-900">
           Top 50 federal contractors by FY2025 contract value
         </h2>
