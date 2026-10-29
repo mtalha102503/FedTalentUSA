@@ -49,6 +49,14 @@ export async function generateMetadata({
       url,
       siteName: "FedTalentUSA",
       type: "article",
+      images: [
+        {
+          url: "https://fedtalentusa.com/opengraph-image",
+          width: 1200,
+          height: 630,
+          alt: `${name} | FedTalentUSA`,
+        },
+      ],
     },
   };
 }

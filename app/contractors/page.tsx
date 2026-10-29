@@ -14,6 +14,14 @@ export const metadata: Metadata = {
     url: "https://fedtalentusa.com/contractors",
     siteName: "FedTalentUSA",
     type: "website",
+    images: [
+      {
+        url: "https://fedtalentusa.com/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "FedTalentUSA — Top Federal Contractors, Ranked by Real Contract Data",
+      },
+    ],
   },
 };
 
