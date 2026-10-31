@@ -48,6 +48,15 @@ export default function PrivacyPage() {
         to identify individual visitors.
       </p>
 
+      <h2 className="mt-8 text-xl font-bold text-slate-900">Analytics</h2>
+      <p className="mt-3 leading-relaxed text-slate-700">
+        We use Google Analytics to understand aggregate traffic — which pages
+        are visited and how visitors reach the site. Analytics uses cookies
+        and reports aggregate statistics; it does not identify individual
+        visitors to us. This is separate from advertising: we do not set
+        advertising cookies.
+      </p>
+
       <h2 className="mt-8 text-xl font-bold text-slate-900">External links</h2>
       <p className="mt-3 leading-relaxed text-slate-700">
         This site links to USAspending.gov and to HireSkys. Those sites have

@@ -20,6 +20,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/about`, lastModified: now, priority: 0.5 },
     { url: `${BASE}/contact`, lastModified: now, priority: 0.5 },
     { url: `${BASE}/privacy`, lastModified: now, priority: 0.5 },
+    { url: `${BASE}/terms`, lastModified: now, priority: 0.5 },
+    { url: `${BASE}/disclaimer`, lastModified: now, priority: 0.5 },
+    { url: `${BASE}/faq`, lastModified: now, priority: 0.5 },
     ...index.map((e) => ({
       url: `${BASE}/contractors/${e.slug}`,
       lastModified: now,
