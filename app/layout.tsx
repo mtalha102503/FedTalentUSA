@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 import Navbar from "./Navbar";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
@@ -134,6 +135,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="flex min-h-screen flex-col">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-2BE68KTVRR"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-2BE68KTVRR');`}
+        </Script>
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
