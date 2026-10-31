@@ -3,6 +3,7 @@ import Link from "next/link";
 import "./globals.css";
 import Navbar from "./Navbar";
 import Script from "next/script";
+import RouteProgress from "./RouteProgress";
 
 export const metadata: Metadata = {
   title: {
@@ -160,6 +161,7 @@ export default function RootLayout({
             gtag('js', new Date());
             gtag('config', 'G-2BE68KTVRR');`}
         </Script>
+        <RouteProgress />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
