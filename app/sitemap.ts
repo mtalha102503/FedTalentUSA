@@ -23,6 +23,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/terms`, lastModified: now, priority: 0.5 },
     { url: `${BASE}/disclaimer`, lastModified: now, priority: 0.5 },
     { url: `${BASE}/faq`, lastModified: now, priority: 0.5 },
+    { url: `${BASE}/author/muhammad-talha`, lastModified: now, priority: 0.5 },
     ...index.map((e) => ({
       url: `${BASE}/contractors/${e.slug}`,
       lastModified: now,

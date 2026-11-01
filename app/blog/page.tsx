@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { blogPosts } from "@/lib/blog";
+import { blogPosts, AUTHOR } from "@/lib/blog";
 
 export const metadata: Metadata = {
   title: "FedTalentUSA Blog",
@@ -36,6 +36,9 @@ function formatDate(iso: string): string {
 }
 
 export default function BlogListingPage() {
+  const sortedPosts = [...blogPosts].sort((a, b) =>
+    b.datePublished.localeCompare(a.datePublished),
+  );
   return (
     <section className="mx-auto max-w-6xl px-4 py-10">
       <nav className="text-sm text-slate-500">
@@ -54,7 +57,7 @@ export default function BlogListingPage() {
         totals from other sites&apos; scopes.
       </p>
       <div className="mt-8 space-y-6">
-        {blogPosts.map((p) => (
+        {sortedPosts.map((p) => (
           <article
             key={p.slug}
             className="rounded-lg border border-slate-200 bg-white p-6"
@@ -74,6 +77,20 @@ export default function BlogListingPage() {
             <p className="mt-3 text-sm text-slate-500">
               {formatDate(p.datePublished)} · {p.readingMinutes} min read
             </p>
+            <Link
+              href={AUTHOR.path}
+              className="mt-3 flex items-center gap-2 text-sm font-medium text-slate-700 hover:text-blue-700"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={AUTHOR.image}
+                alt={AUTHOR.name}
+                width={28}
+                height={28}
+                className="h-7 w-7 rounded-full object-cover"
+              />
+              By {AUTHOR.name}
+            </Link>
             <p className="mt-3">
               <Link
                 href={`/blog/${p.slug}`}

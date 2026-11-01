@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { AUTHOR } from "@/lib/blog";
 
 export const metadata: Metadata = {
   title: "About FedTalentUSA",
@@ -106,6 +108,30 @@ export default function AboutPage() {
         </a>
         .
       </p>
+      <div className="mt-4 flex gap-4 rounded-xl border border-slate-200 bg-slate-50 p-5">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={AUTHOR.image}
+          alt={AUTHOR.name}
+          width={72}
+          height={72}
+          className="h-[72px] w-[72px] shrink-0 rounded-full object-cover"
+        />
+        <div>
+          <p className="font-bold text-slate-900">{AUTHOR.name}</p>
+          <p className="text-sm font-medium text-blue-700">{AUTHOR.role}</p>
+          <p className="mt-1 text-sm leading-relaxed text-slate-600">
+            FedTalentUSA is built and maintained by {AUTHOR.name}, founder
+            of HireSkys — the remote-jobs platform behind this project.{" "}
+            <Link
+              href={AUTHOR.path}
+              className="font-semibold text-blue-700 hover:underline"
+            >
+              Read his author page →
+            </Link>
+          </p>
+        </div>
+      </div>
     </section>
   );
 }

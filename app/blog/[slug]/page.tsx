@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getAllBlogSlugs, getBlogPost } from "@/lib/blog";
+import { getAllBlogSlugs, getBlogPost, AUTHOR } from "@/lib/blog";
 import TopFederalContractorsContent from "@/lib/blog/posts/top-federal-contractors";
 import HowToGetGovernmentContractsContent from "@/lib/blog/posts/how-to-get-government-contracts";
 
@@ -76,9 +76,10 @@ export default async function BlogPostPage({
     datePublished: post.datePublished,
     dateModified: post.dateModified,
     author: {
-      "@type": "Organization",
-      name: "FedTalentUSA",
-      url: "https://fedtalentusa.com/",
+      "@type": "Person",
+      name: AUTHOR.name,
+      url: `https://fedtalentusa.com${AUTHOR.path}`,
+      image: `https://fedtalentusa.com${AUTHOR.image}`,
     },
     publisher: {
       "@type": "Organization",
@@ -132,13 +133,60 @@ export default async function BlogPostPage({
       <h1 className="mt-3 text-3xl font-bold leading-tight text-slate-900 md:text-4xl">
         {post.title}
       </h1>
-      <p className="mt-3 text-sm text-slate-500">
-        Published {formatDate(post.datePublished)} · {post.readingMinutes}{" "}
-        min read · FedTalentUSA
-      </p>
+      <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-slate-500">
+        <Link
+          href={AUTHOR.path}
+          className="flex items-center gap-2 font-medium text-slate-700 hover:text-blue-700"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={AUTHOR.image}
+            alt={AUTHOR.name}
+            width={28}
+            height={28}
+            className="h-7 w-7 rounded-full object-cover"
+          />
+          By {AUTHOR.name}
+        </Link>
+        <span>·</span>
+        <span>Published {formatDate(post.datePublished)}</span>
+        <span>·</span>
+        <span>{post.readingMinutes} min read</span>
+      </div>
       <div className="mt-8">
         <Content />
       </div>
+      <section className="mt-10 flex gap-4 rounded-xl border border-slate-200 bg-slate-50 p-5">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={AUTHOR.image}
+          alt={AUTHOR.name}
+          width={64}
+          height={64}
+          className="h-16 w-16 shrink-0 rounded-full object-cover"
+        />
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+            Written by
+          </p>
+          <Link
+            href={AUTHOR.path}
+            className="mt-0.5 block font-bold text-slate-900 hover:text-blue-700"
+          >
+            {AUTHOR.name}
+          </Link>
+          <p className="text-sm font-medium text-blue-700">{AUTHOR.role}</p>
+          <p className="mt-2 text-sm leading-relaxed text-slate-600">
+            {AUTHOR.bioShort}
+          </p>
+          <Link
+            href={AUTHOR.path}
+            className="mt-2 inline-block text-sm font-semibold text-blue-700 hover:underline"
+          >
+            More from {AUTHOR.name} →
+          </Link>
+        </div>
+      </section>
       <p className="mt-10 border-t border-slate-200 pt-6">
         <Link
           href="/blog"

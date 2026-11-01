@@ -129,3 +129,29 @@ export function getBlogPost(slug: string): BlogPostMeta | undefined {
 export function getAllBlogSlugs(): string[] {
   return blogPosts.map((p) => p.slug);
 }
+
+export interface AuthorInfo {
+  name: string;
+  slug: string;
+  role: string;
+  image: string;
+  path: string;
+  bioShort: string;
+  bioLong: string[];
+  sameAs: string[];
+}
+
+export const AUTHOR: AuthorInfo = {
+  name: "Muhammad Talha",
+  slug: "muhammad-talha",
+  role: "Founder, HireSkys",
+  image: "/muhammad-talha.jpg",
+  path: "/author/muhammad-talha",
+  bioShort:
+    "Founder of HireSkys. Muhammad Talha built FedTalentUSA on official USAspending.gov federal contract data — so businesses can see who actually wins federal contracts, which agencies buy, and where the work goes.",
+  bioLong: [
+    "Muhammad Talha is the founder of HireSkys, the remote-jobs platform behind FedTalentUSA. He built FedTalentUSA to turn USAspending.gov's public federal contract records into a searchable ranking anyone can use.",
+    "His work focuses on the data behind federal contracting: which companies actually win contracts, how agency, state, and industry splits shape the market, and what the latest complete fiscal year shows. Every guide on this site is written from that contract data and checked against official sources.",
+  ],
+  sameAs: ["https://www.hireskys.com"],
+};
