@@ -3,11 +3,13 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getAllBlogSlugs, getBlogPost } from "@/lib/blog";
 import TopFederalContractorsContent from "@/lib/blog/posts/top-federal-contractors";
+import HowToGetGovernmentContractsContent from "@/lib/blog/posts/how-to-get-government-contracts";
 
 export const dynamicParams = false;
 
 const COMPONENTS: Record<string, React.ComponentType> = {
   "top-federal-contractors": TopFederalContractorsContent,
+  "how-to-get-government-contracts": HowToGetGovernmentContractsContent,
 };
 
 export async function generateStaticParams() {
