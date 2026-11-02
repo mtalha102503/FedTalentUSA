@@ -10,6 +10,7 @@ const LINKS_BEFORE_TOOLS = [
 ];
 const TOOLS_LINKS = [
   { href: "/tools/contractor-finder", label: "Finder" },
+  { href: "/tools/company-naics-lookup", label: "Company NAICS Lookup" },
 ];
 const LINKS_AFTER_TOOLS = [
   { href: "/about", label: "About" },
