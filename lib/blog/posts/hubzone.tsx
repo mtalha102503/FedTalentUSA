@@ -10,6 +10,9 @@
 // out of date); sole-source ceilings are $7M manufacturing / $4.5M other
 // (13 CFR 126.612); the 35% test covers ALL employees, not principal-office
 // staff only; the 10% preference applies in full-and-open competition only.
+// The inline SVG diagram in this file is original code drawn for this
+// guide. It uses no third-party images, screenshots, or map tiles, so it
+// carries no third-party copyright.
 import Link from "next/link";
 
 function Table({
@@ -377,6 +380,60 @@ export default function HubzoneContent() {
           SBA if the business is involved in a merger or acquisition.
         </li>
       </ol>
+      <figure className="mt-8 rounded-lg border border-slate-200 bg-white p-6">
+        <svg
+          viewBox="0 0 720 530"
+          className="h-auto w-full"
+          role="img"
+          aria-labelledby="hubzone-flow-title"
+        >
+          <title id="hubzone-flow-title">
+            HUBZone certification journey: map check, pre-test, documents,
+            application, decision, recertification
+          </title>
+          <line x1="36" y1="40" x2="36" y2="490" stroke="#bfdbfe" strokeWidth="4" />
+          <g>
+            <circle cx="36" cy="40" r="22" fill="#1d4ed8" />
+            <text x="36" y="46" textAnchor="middle" fontSize="17" fontWeight="700" fill="#ffffff">1</text>
+            <text x="72" y="36" fontSize="17" fontWeight="700" fill="#0f172a">Check the map</text>
+            <text x="72" y="58" fontSize="14" fill="#475569">Exact address — office and employee addresses separately</text>
+          </g>
+          <g>
+            <circle cx="36" cy="130" r="22" fill="#1d4ed8" />
+            <text x="36" y="136" textAnchor="middle" fontSize="17" fontWeight="700" fill="#ffffff">2</text>
+            <text x="72" y="126" fontSize="17" fontWeight="700" fill="#0f172a">Pre-test eligibility</text>
+            <text x="72" y="148" fontSize="14" fill="#475569">SBA HUBZone Calculator before you apply</text>
+          </g>
+          <g>
+            <circle cx="36" cy="220" r="22" fill="#1d4ed8" />
+            <text x="36" y="226" textAnchor="middle" fontSize="17" fontWeight="700" fill="#ffffff">3</text>
+            <text x="72" y="216" fontSize="17" fontWeight="700" fill="#0f172a">Gather documents</text>
+            <text x="72" y="238" fontSize="14" fill="#475569">Lease, roster, payroll, ownership, tax returns</text>
+          </g>
+          <g>
+            <circle cx="36" cy="310" r="22" fill="#1d4ed8" />
+            <text x="36" y="316" textAnchor="middle" fontSize="17" fontWeight="700" fill="#ffffff">4</text>
+            <text x="72" y="306" fontSize="17" fontWeight="700" fill="#0f172a">Apply online</text>
+            <text x="72" y="328" fontSize="14" fill="#475569">MySBA Certifications — applying is free</text>
+          </g>
+          <g>
+            <circle cx="36" cy="400" r="22" fill="#1d4ed8" />
+            <text x="36" y="406" textAnchor="middle" fontSize="17" fontWeight="700" fill="#ffffff">5</text>
+            <text x="72" y="396" fontSize="17" fontWeight="700" fill="#0f172a">Get a decision</text>
+            <text x="72" y="418" fontSize="14" fill="#475569">Within 90 days of a complete application</text>
+          </g>
+          <g>
+            <circle cx="36" cy="490" r="22" fill="#1d4ed8" />
+            <text x="36" y="496" textAnchor="middle" fontSize="17" fontWeight="700" fill="#ffffff">6</text>
+            <text x="72" y="486" fontSize="17" fontWeight="700" fill="#0f172a">Stay certified</text>
+            <text x="72" y="508" fontSize="14" fill="#475569">Recertify every 3 years — maintain 35% residency</text>
+          </g>
+        </svg>
+        <p className="mt-3 text-center text-sm text-slate-500">
+          The HUBZone certification journey, from map check to three-year
+          recertification.
+        </p>
+      </figure>
       <Table
         head={["Document", "What it proves", "Evidence tip"]}
         rows={[
