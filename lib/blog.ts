@@ -120,6 +120,58 @@ export const blogPosts: BlogPostMeta[] = [
       },
     ],
   },
+  {
+    slug: "hubzone",
+    title: "HUBZone Certification: What It Is, Who Qualifies, and How to Apply (2026 Guide)",
+    excerpt:
+      "HUBZone certification explained from SBA rules and 13 CFR Part 126: the four eligibility tests, the 10% price preference, sole-source ceilings, a step-by-step map check, and the three-year recertification rule older guides still get wrong.",
+    datePublished: "2026-11-02",
+    dateModified: "2026-11-02",
+    readingMinutes: 14,
+    tags: ["HUBZone", "Small Business Programs", "SBA Certification"],
+    faqs: [
+      {
+        question: "What is a HUBZone?",
+        answer:
+          "A HUBZone — Historically Underutilized Business Zone — is a geographic area the SBA designates as economically distressed, based on poverty rates, unemployment, income, or other criteria. The HUBZone program gives small businesses located in these zones preferential access to federal contracts: set-aside contracts reserved for certified firms, and a 10% price evaluation preference in full and open competitions.",
+      },
+      {
+        question: "What is the HUBZone 35% rule?",
+        answer:
+          "At least 35% of a certified firm's employees must reside in a HUBZone. The test covers all employees, not only the staff at the principal office, and those employees do not have to live in the same HUBZone as the office. During performance of a HUBZone contract, the firm must attempt to maintain that 35% share.",
+      },
+      {
+        question: "Can a home office qualify as a HUBZone principal office?",
+        answer:
+          "It can, if it genuinely is the principal office — the place where the greatest number of the firm's employees perform their work — and that address sits inside a designated HUBZone. What does not work is a mailing address, a registered-agent address, or a virtual office where nobody actually works. SBA can visit and examine a firm, so the office has to be real and evidenced.",
+      },
+      {
+        question: "How long does HUBZone certification take?",
+        answer:
+          "SBA states it will decide within 90 days after receiving a complete application. The key word is complete: if SBA has to come back for missing documents or information, the clock effectively restarts on the missing piece. Guides commonly quote 60 to 90 days, which is consistent with the SBA standard but is an estimate, not a promise.",
+      },
+      {
+        question: "How often do you have to recertify for HUBZone?",
+        answer:
+          "Every three years. You can apply for recertification from 90 days before your certification anniversary up to 30 days after it. Older guides that say recertification is annual are out of date — the three-year cycle comes from the December 2024 amendments to 13 CFR Part 126. There is no limit on how long a business can stay in the program as long as it keeps qualifying.",
+      },
+      {
+        question: "Does HUBZone certification guarantee federal contracts?",
+        answer:
+          "No. The regulation says so expressly: certification makes you eligible to compete for set-asides and gives you the price preference, but it guarantees nothing. Agencies still have to find at least two certified firms likely to bid at a fair price before setting a contract aside, and you still have to win the competition.",
+      },
+      {
+        question: "Can a business hold HUBZone certification and 8(a) certification at the same time?",
+        answer:
+          "Yes. SBA states that HUBZone-certified firms can still compete under other socio-economic programs they qualify for. Note one limit: a contracting officer cannot restrict a HUBZone competition to firms that are both HUBZone and something else, such as HUBZone plus 8(a).",
+      },
+      {
+        question: "What happens if my area loses its HUBZone designation?",
+        answer:
+          "Designations change on a five-year cycle for census tracts and counties, and the map shows transition and expiry dates for redesignated and expiring areas. Check the exact date shown for your address on the SBA map before relying on it, and re-check before applying or bidding — a designation that was valid when you certified may not be valid at your next recertification.",
+      },
+    ],
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPostMeta | undefined {

@@ -4,12 +4,14 @@ import type { Metadata } from "next";
 import { getAllBlogSlugs, getBlogPost, AUTHOR } from "@/lib/blog";
 import TopFederalContractorsContent from "@/lib/blog/posts/top-federal-contractors";
 import HowToGetGovernmentContractsContent from "@/lib/blog/posts/how-to-get-government-contracts";
+import HubzoneContent from "@/lib/blog/posts/hubzone";
 
 export const dynamicParams = false;
 
 const COMPONENTS: Record<string, React.ComponentType> = {
   "top-federal-contractors": TopFederalContractorsContent,
   "how-to-get-government-contracts": HowToGetGovernmentContractsContent,
+  hubzone: HubzoneContent,
 };
 
 export async function generateStaticParams() {
