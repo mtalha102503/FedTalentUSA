@@ -5,6 +5,7 @@ import { getAllBlogSlugs, getBlogPost, AUTHOR } from "@/lib/blog";
 import TopFederalContractorsContent from "@/lib/blog/posts/top-federal-contractors";
 import HowToGetGovernmentContractsContent from "@/lib/blog/posts/how-to-get-government-contracts";
 import HubzoneContent from "@/lib/blog/posts/hubzone";
+import SaildroneMusvContent from "@/lib/blog/posts/saildrone-musv-navy-court-ruling";
 
 export const dynamicParams = false;
 
@@ -12,6 +13,7 @@ const COMPONENTS: Record<string, React.ComponentType> = {
   "top-federal-contractors": TopFederalContractorsContent,
   "how-to-get-government-contracts": HowToGetGovernmentContractsContent,
   hubzone: HubzoneContent,
+  "saildrone-musv-navy-court-ruling": SaildroneMusvContent,
 };
 
 export async function generateStaticParams() {
