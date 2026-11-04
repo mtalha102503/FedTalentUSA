@@ -172,6 +172,48 @@ export const blogPosts: BlogPostMeta[] = [
       },
     ],
   },
+  {
+    slug: "saildrone-musv-navy-court-ruling",
+    title: "Saildrone's Court Win Over the Navy: The $2.1B MUSV Ruling, the $600M Freeze, and What It Means for Small Vendors",
+    excerpt:
+      "A federal judge ordered the Navy to re-evaluate Saildrone's proposal in the $2.1B MUSV competition, capped further obligations at $1.5B, and held that OTA prototype competitions can be protested in court. The full timeline, the money, and what it means for small and nontraditional vendors.",
+    datePublished: "2026-11-04",
+    dateModified: "2026-11-04",
+    readingMinutes: 12,
+    tags: ["Navy Contracts", "Bid Protests", "OTA", "Small Business"],
+    faqs: [
+      {
+        question: "What did the court actually order?",
+        answer:
+          "The Navy must re-evaluate Saildrone's proposal using the same criteria it applied to other competitors, including a new chance at the at-sea demonstration Saildrone was denied. Until that evaluation is complete, the Navy may obligate no more than $1.5 billion of the program's money for MUSV construction. If the re-evaluation finds Saildrone's proposal acceptable, the Navy must reinstate it to the competition.",
+      },
+      {
+        question: "Does the ruling cancel the September 29 MUSV awards?",
+        answer:
+          "No. The September 29 production agreements — 10 vessels each for Galliano Marine Services, HII and Saronic Technologies — stand. The court's order caps further MUSV construction obligations at $1.5 billion until Saildrone's re-evaluation finishes; it does not unwind awards already made.",
+      },
+      {
+        question: "What is an OTA, and why couldn't Saildrone protest at GAO?",
+        answer:
+          "An Other Transaction agreement sits outside the Federal Acquisition Regulation and the Competition in Contracting Act, giving agencies more flexibility for prototype work. Because the MUSV awards were OTAs, the normal GAO bid-protest route was unavailable to excluded firms — which is why Saildrone and Blue Water Autonomy sued in the Court of Federal Claims instead.",
+      },
+      {
+        question: "What is the $600 million figure?",
+        answer:
+          "It is the gap between the MUSV program's $2.1 billion total and the $1.5 billion obligation cap the court imposed: about $600 million the Navy cannot spend on MUSV construction until Saildrone's re-evaluation is complete. It is a freeze on further obligations, not a cancelled contract.",
+      },
+      {
+        question: "What happens to Saildrone now?",
+        answer:
+          "Saildrone gets a fresh evaluation and a new at-sea demonstration — the final, most rigorous step of the competition. Re-instatement to the competition follows only if the re-evaluation finds its proposal acceptable. No public deadline for the re-evaluation had been reported at the time of writing.",
+      },
+      {
+        question: "How can I track HII and other MUSV winners on FedTalentUSA?",
+        answer:
+          "HII is ranked #7 of 1,000 in the FedTalentUSA FY2025 ranking, with $10,934,408,068 in FY2025 federal contract obligations, almost all of it from the Department of Defense. Its full agency, state and industry breakdown is on its contractor page, and the Contractor Finder tool lets you filter the top 1,000 by agency, state and industry.",
+      },
+    ],
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPostMeta | undefined {
