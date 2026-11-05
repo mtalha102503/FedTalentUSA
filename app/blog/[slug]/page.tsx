@@ -6,6 +6,7 @@ import TopFederalContractorsContent from "@/lib/blog/posts/top-federal-contracto
 import HowToGetGovernmentContractsContent from "@/lib/blog/posts/how-to-get-government-contracts";
 import HubzoneContent from "@/lib/blog/posts/hubzone";
 import SaildroneMusvContent from "@/lib/blog/posts/saildrone-musv-navy-court-ruling";
+import EightAContent from "@/lib/blog/posts/8a-certification";
 
 export const dynamicParams = false;
 
@@ -14,6 +15,7 @@ const COMPONENTS: Record<string, React.ComponentType> = {
   "how-to-get-government-contracts": HowToGetGovernmentContractsContent,
   hubzone: HubzoneContent,
   "saildrone-musv-navy-court-ruling": SaildroneMusvContent,
+  "8a-certification": EightAContent,
 };
 
 export async function generateStaticParams() {

@@ -214,6 +214,68 @@ export const blogPosts: BlogPostMeta[] = [
       },
     ],
   },
+  {
+    slug: "8a-certification",
+    title: "SBA 8(a) Certification in 2026: Eligibility and How to Apply",
+    excerpt:
+      "SBA 8(a) certification opens federal set-aside and sole-source contracts to qualifying small firms. This guide covers the September 2026 social-disadvantage standard, the three economic tests, how to apply, sole-source limits, and staying eligible for the full nine years.",
+    datePublished: "2026-11-06",
+    dateModified: "2026-11-06",
+    readingMinutes: 14,
+    tags: ["8(a) Certification", "SBA Certification", "Small Business Programs"],
+    faqs: [
+      {
+        question: "How long does 8(a) certification last?",
+        answer:
+          "For a new applicant, the standard program term is nine years: four developmental years followed by five transitional years. The term starts on the date of the SBA approval letter. There is no re-entry after a firm leaves the program, so the nine years are a one-time window.",
+      },
+      {
+        question: "What is the sole-source limit for 8(a) contracts?",
+        answer:
+          "An agency must compete an 8(a) requirement among eligible participants when two conditions are both met: the anticipated value, including options, exceeds $5.5 million for most acquisitions ($8.5 million for manufacturing NAICS codes), and at least two eligible and responsible participants are expected to submit offers at a fair market price. If either condition is missing — the value is below the ceiling, or no two eligible and responsible participants are expected to compete — the agency can award sole-source to one eligible participant. Tribally owned and Alaska Native Corporation-owned firms can receive sole-source awards above the ceilings.",
+      },
+      {
+        question: "How long does SBA take to decide an 8(a) application?",
+        answer:
+          "SBA advises the applicant within 15 days of receipt whether the submission is complete. The 90-day processing period runs from the date SBA receives a complete package — not from the first submission. If SBA asks for clarification or revised information, the clock stops until the applicant responds. Practitioners report reviews taking longer than a year in some 2025–26 cases, so do not plan around a flat 90 days.",
+      },
+      {
+        question: "Can I reapply if SBA denies my 8(a) application?",
+        answer:
+          "Yes. A declined firm may submit a new application at any time after 90 calendar days from the date of SBA's final decision to decline. Before reapplying, address each defect SBA stated in its written denial. There is no 12-month waiting rule after a third denial in the regulation.",
+      },
+      {
+        question: "What changed for 8(a) applicants in September 2026?",
+        answer:
+          "SBA's final rule (91 FR 51568) took effect September 10, 2026. It removed the rebuttable presumption of social disadvantage and retired the personal social-disadvantage narrative. Individually owned applicants must now show social disadvantage with a two-part evidence test: objective evidence that a government, university, or corporation discriminated against or disfavored a group the applicant belonged to, plus the applicant's self-certification of membership at the time and material harm to their economic advancement.",
+      },
+      {
+        question: "Is there a fee to apply for 8(a) certification?",
+        answer:
+          "No. SBA charges no application fee, and applications are filed free through MySBA Certifications at certifications.sba.gov. SAM.gov registration is also free. Anyone charging a fee to file the application is selling a service, not paying SBA.",
+      },
+      {
+        question: "What is the December 24, 2026 deadline for 8(a) applications?",
+        answer:
+          "It applies only to individually owned 8(a) applications that SBA returned on September 10, 2026, when the new social-disadvantage rule took effect. Those applicants must update their applications to the new standard and resubmit by December 24, 2026 (extended from October 25, 2026). New applicants follow the normal process and this deadline does not apply to them.",
+      },
+      {
+        question: "Does 8(a) certification guarantee federal contracts?",
+        answer:
+          "No. Certification gives access to contracts reserved for 8(a) firms — competitive set-asides and sole-source awards — plus a dedicated Business Opportunity Specialist and business development support. The firm still has to win the work, perform it, and stay eligible through annual reviews for the full nine years.",
+      },
+      {
+        question: "Can a firm rejoin the 8(a) program after leaving?",
+        answer:
+          "No. A firm that has already participated in the 8(a) program cannot re-enter. A qualifying entity may own more than one eligible participant firm, but each firm has its own one-time participation.",
+      },
+      {
+        question: "Do I still need to write a social-disadvantage narrative?",
+        answer:
+          "No. The personal narrative was retired by the September 10, 2026 rule. SBA staff were directed in January 2026 not to request or consider those narratives. What the new standard requires instead is evidence: documents showing a discriminatory action, policy, or practice, plus your self-certification of group membership at the time and material harm.",
+      },
+    ],
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPostMeta | undefined {
