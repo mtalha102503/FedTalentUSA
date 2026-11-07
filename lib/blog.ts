@@ -276,6 +276,48 @@ export const blogPosts: BlogPostMeta[] = [
       },
     ],
   },
+  {
+    slug: "viasat-sdn-backbone-mission-operations-center",
+    title: "Viasat's $450M Space Data Network Win: What the Mission Operations Center Means for Golden Dome Vendors",
+    excerpt:
+      "Viasat has won a $450 million-ceiling Space Force contract, with $115 million funded at award, to design, field, and scale the Mission Operations Center for the Space Data Network–Backbone — the multi-vendor network being built in partnership with Golden Dome for America.",
+    datePublished: "2026-11-07",
+    dateModified: "2026-11-07",
+    readingMinutes: 8,
+    tags: ["Golden Dome", "Space Data Network", "Viasat"],
+    faqs: [
+      {
+        question: "How much is Viasat actually getting under this contract?",
+        answer:
+          "Viasat has a funded initial task order of $115 million. The contract's maximum ceiling is $450 million, which is the most that could be ordered under it — not an amount guaranteed or paid at award.",
+      },
+      {
+        question: "What will Viasat build and run?",
+        answer:
+          "Viasat will design, field, and scale the Mission Operations Center for the Space Data Network–Backbone, serving as the network and mission system integration partner. The center brings together mission integration, network operations, and data transport management.",
+      },
+      {
+        question: "What is the Space Data Network–Backbone?",
+        answer:
+          "It is the Space Force's open-architecture, multi-vendor space data network under the Space-Based Sensing and Targeting portfolio, being expanded across multiple space-segment providers and built in partnership with Golden Dome for America.",
+      },
+      {
+        question: "What is Golden Dome for America?",
+        answer:
+          "As described in the announcement, it is the Department of War's layered homeland defense initiative, integrating sensors, data, command-and-control, and defensive systems to detect, track, and defeat advanced missile and aerial threats.",
+      },
+      {
+        question: "Which other companies are already part of the program?",
+        answer:
+          "The SBST portfolio's earlier Delivery Order 2 and Delivery Order 3 work involved Amazon LEO for Government, Lockheed Martin, Northrop Grumman, Rocket Lab, and York Space Systems. Separately, SpaceX holds the foundational $2.29 billion other transaction authority agreement (May 2026) for the proliferated low Earth orbit backbone constellation, with a fully operational prototype due by the end of 2027.",
+      },
+      {
+        question: "Is this the same as Viasat's NASA Ka-band award?",
+        answer:
+          "No. The NASA Ka-band relay selections announced on 4 November 2026 — where Viasat appears with a $460.9 million ceiling, at concept stage only — are a separate award from a different agency. This article is about the Space Force Space Systems Command award announced on 6 November 2026.",
+      },
+    ],
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPostMeta | undefined {
