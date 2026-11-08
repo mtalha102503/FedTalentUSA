@@ -8,6 +8,7 @@ import HubzoneContent from "@/lib/blog/posts/hubzone";
 import SaildroneMusvContent from "@/lib/blog/posts/saildrone-musv-navy-court-ruling";
 import EightAContent from "@/lib/blog/posts/8a-certification";
 import ViasatSdnContent from "@/lib/blog/posts/viasat-sdn-backbone-mission-operations-center";
+import NasaClps2Content from "@/lib/blog/posts/nasa-clps-2-lunar-delivery-contracts";
 
 export const dynamicParams = false;
 
@@ -18,6 +19,7 @@ const COMPONENTS: Record<string, React.ComponentType> = {
   "saildrone-musv-navy-court-ruling": SaildroneMusvContent,
   "8a-certification": EightAContent,
   "viasat-sdn-backbone-mission-operations-center": ViasatSdnContent,
+  "nasa-clps-2-lunar-delivery-contracts": NasaClps2Content,
 };
 
 export async function generateStaticParams() {

@@ -318,6 +318,53 @@ export const blogPosts: BlogPostMeta[] = [
       },
     ],
   },
+  {
+    slug: "nasa-clps-2-lunar-delivery-contracts",
+    title: "NASA CLPS 2: The $10B Moon Delivery Framework — Who's In, What's Funded, and What It Means for Federal Contractors",
+    excerpt:
+      "NASA has named eight vendors for CLPS 2, a 10-year Moon delivery framework with a $10 billion ceiling — but only $94 million is funded so far, to Blue Origin for the nuclear-powered PROMISE rover. Five of the eight vendors are already in FedTalentUSA's Top 1,000 federal contractors.",
+    datePublished: "2026-11-08",
+    dateModified: "2026-11-08",
+    readingMinutes: 11,
+    tags: ["NASA CLPS", "Moon Base", "Federal Contractors"],
+    faqs: [
+      {
+        question: "What is NASA CLPS 2?",
+        answer:
+          "CLPS 2 is the next phase of NASA's Commercial Lunar Payload Services program: a 10-year, multiple-award, indefinite-delivery/indefinite-quantity contract with a combined maximum value of $10 billion. Eight companies were selected and are now eligible to compete for future lunar surface delivery task orders. Selection is eligibility to compete — it is not a guaranteed award or payment.",
+      },
+      {
+        question: "How much money has NASA actually awarded under CLPS 2 so far?",
+        answer:
+          "One award: a $94 million base contract to Blue Origin, with a $140 million performance option, to deliver the nuclear-powered PROMISE rover to the Moon's South Pole on Blue Origin's Mark 1 lander. The $10 billion figure is the contract ceiling — the maximum that could be ordered over 10 years — not money paid at award.",
+      },
+      {
+        question: "Is the $1.3 billion part of CLPS 2?",
+        answer:
+          "No. The approximately $1.3 billion is six launch and in-space transportation task orders under a separate contract — NASA's Venture-Class Acquisition of Dedicated and Rideshare (VADR) launch services contract, awarded to Arrow Science and Technology, Blue Origin, and Impulse Space. VADR itself is a 10-year contract with a $5 billion maximum total value. It was announced the same day, which is why the two figures get mixed up.",
+      },
+      {
+        question: "What is the $15 billion CLPS 2 figure I have seen?",
+        answer:
+          "It is an option, not the current ceiling. Voyager Technologies' release states the base CLPS 2 contract runs through 2036 under a $10 billion ceiling, with an option to extend to 2041 that would raise the ceiling to $15 billion. Unless that option is exercised, $10 billion is the ceiling.",
+      },
+      {
+        question: "Which CLPS 2 vendors are in FedTalentUSA's Top 1,000 federal contractors?",
+        answer:
+          "Five of the eight: Lockheed Martin Corp at #1 ($64,725,692,748 in FY2025), Northrop Grumman Corporation at #8 ($9,763,138,991), Space Exploration Technologies Corp. (SpaceX) at #30 ($3,009,914,691), Firefly Aerospace Inc. at #531 ($115,033,988), and Blue Origin, LLC at #584 ($106,054,852). Intuitive Machines, iSpace US, and Voyager Technologies are not in the Top 1,000. Lockheed Martin Space and Northrop Grumman Space Systems are divisions — the ranking lists their parent families.",
+      },
+      {
+        question: "What is the PROMISE rover?",
+        answer:
+          "PROMISE — Polar Rover for Observation, Mapping, and In-Situ Exploration — is a nuclear-powered, six-wheeled rover that will land at the Moon's South Pole to characterize the surface and subsurface, assess resource potential, and provide data for landing site selection. NASA's Jet Propulsion Laboratory manages the mission and is building the rover from spare flight components and engineering test models from the Curiosity and Perseverance Mars rovers. Launch is targeted for late 2028, with an 18-month mission.",
+      },
+      {
+        question: "What happened to the original CLPS contract?",
+        answer:
+          "It continues. NASA raised the CLPS 1.0 contract ceiling from $2.6 billion to $4.2 billion to support initial Moon Base objectives. The original contract remains in place through November 2028, with an additional five-year period to complete awarded lunar deliveries through November 2033. CLPS 2 is the next-phase framework that follows it.",
+      },
+    ],
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPostMeta | undefined {
