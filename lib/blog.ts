@@ -365,6 +365,53 @@ export const blogPosts: BlogPostMeta[] = [
       },
     ],
   },
+  {
+    slug: "sba-veteran-contracting-goal-10-percent",
+    title: "SBA Doubles the Veteran Contracting Goal to 10%: What VOSB and SDVOSB Firms Should Do Now",
+    excerpt:
+      "SBA has doubled the FY2027 federal contracting goal for veteran-owned and service-disabled veteran-owned small businesses from 5% to 10% — for prime contracts and subcontracts. Here is what changed, what a goal does and does not guarantee, and the four moves a VOSB or SDVOSB firm should make now.",
+    datePublished: "2026-11-11",
+    dateModified: "2026-11-11",
+    readingMinutes: 15,
+    tags: ["SBA Certification", "Veteran Contracting", "Small Business Programs"],
+    faqs: [
+      {
+        question: "What exactly did SBA change?",
+        answer:
+          "SBA doubled the FY2027 agency-level contracting goal for veteran-owned and service-disabled veteran-owned small businesses from 5% to 10%, for both prime contracts and subcontracts. The goal is now one combined category covering VOSBs and SDVOSBs together; the previous 5% goal covered SDVOSBs only.",
+      },
+      {
+        question: "Does the 10% goal guarantee my firm more contracts?",
+        answer:
+          "No. A contracting goal is an agency-level target, not a set-aside and not a promise of dollars. Agencies still run competitions, and firms still have to win them. What the goal may do is increase agencies' incentive to buy from certified veteran-owned firms — and count VOSBs toward this new combined FY2027 target.",
+      },
+      {
+        question: "What is the difference between a VOSB and an SDVOSB?",
+        answer:
+          "Both must be at least 51% owned and controlled by qualifying veterans and small under the applicable size standard. An SDVOSB must be owned and controlled by veterans with a service-connected disability determined by the VA. A certified SDVOSB can compete for set-aside and sole-source opportunities government-wide; a certified VOSB can compete for set-asides at the Department of Veterans Affairs under its Vets First program. Both count toward the new combined 10% goal.",
+      },
+      {
+        question: "Do I need VetCert certification to count toward the goal?",
+        answer:
+          "Yes, with one narrow exception. SBA's VetCert program is the sole federal certification portal for VOSB and SDVOSB status, and certification is free. The grace period for self-certifying ended on December 22, 2024, and contracting officers must confirm that SAM.gov shows a firm as SBA-certified. The exception, written for SDVOSB credit, covers firms that submitted a complete application by December 22, 2024: they keep eligibility until SBA decides on it. A new application submitted today does not carry that transitional eligibility. Apply through MySBA Certifications at certifications.sba.gov.",
+      },
+      {
+        question: "What is the 7(a) equity change for veterans buying a business?",
+        answer:
+          "From Veterans Day, November 11, 2026, through the end of FY2027 (September 30, 2027), eligible veterans acquiring an existing business with an SBA 7(a) loan can fund the full required 10% equity contribution from permitted outside sources, such as seller standby notes or investor capital. Previously, outside sources could cover no more than half. The 10% requirement itself has not changed.",
+      },
+      {
+        question: "What is the VetsinTech pilot?",
+        answer:
+          "A national pilot program from SBA and VetsinTech offering training, capital access support, and procurement pathways for veteran founders in the $10 billion drone and dual-use aerospace sector, drawing on a 120,000-member network. It is aimed at veteran founders entering the defense supply chain through drones.",
+      },
+      {
+        question: "When does the 10% goal take effect?",
+        answer:
+          "The goals cover federal fiscal year 2027, which began on October 1, 2026. SBA announced them on November 9, 2026. Agencies' performance against the goals is measured through SBA's annual Small Business Procurement Scorecard.",
+      },
+    ],
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPostMeta | undefined {
