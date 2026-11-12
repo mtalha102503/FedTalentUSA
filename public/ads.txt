@@ -2,6 +2,8 @@ OWNERDOMAIN=fedtalentusa.com
 MANAGERDOMAIN=themoneytizer.com
 INVENTORYPARTNERDOMAIN=pubx.ai
 themoneytizer.com,133603,DIRECT
+improvedigital.com, 1602_133603, DIRECT
+improvedigital.com, 1033_133603, DIRECT
 smartadserver.com, 1097, RESELLER
 pubmatic.com, 156439, RESELLER, 5d62403b186f2ace
 pubmatic.com, 154037, RESELLER, 5d62403b186f2ace
