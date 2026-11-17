@@ -412,6 +412,58 @@ export const blogPosts: BlogPostMeta[] = [
       },
     ],
   },
+  {
+    slug: "gsa-mas-refresh-34",
+    title: "GSA MAS Refresh 34: Evergreen Contracts, AI Rules & Next Steps",
+    excerpt:
+      "GSA's MAS Refresh 34, issued November 12, 2026, ends the 20-year contract limit, adds an AI data-safeguarding clause and a voluntary domestic end product certificate. What changed, what it means for your contract, and how to accept the mass modification.",
+    datePublished: "2026-11-17",
+    dateModified: "2026-11-17",
+    readingMinutes: 14,
+    tags: ["GSA MAS", "Federal Contracts", "Policy News"],
+    faqs: [
+      {
+        question: "What is the deadline to accept the MAS Refresh 34 mass modification?",
+        answer:
+          "Check your Refresh 34 mass-modification notice for your acceptance deadline. GSA generally requires acceptance within 90 days of receipt; do not calculate your contract's deadline solely from the solicitation publication date. The solicitation refresh was issued November 12, 2026, so a modification issued that day would compute to February 10, 2027 — but that is an example, not your deadline. Your own Mass Mod Portal notice is the controlling document for your contract.",
+      },
+      {
+        question: "What happens if I do not accept the mass modification?",
+        answer:
+          "Under clause 552.238-191(h), failure to accept a mass modification by the acceptance date designated by the FSS Contracting Officer may result in your pricing and catalog data being temporarily removed, or your contract being cancelled. The word is may — it is a discretionary remedy, not automatic termination the day after the deadline. An unsigned modification also rolls into the next mass modification rather than disappearing.",
+      },
+      {
+        question: "Does Refresh 34 really remove the 20-year limit on MAS contracts?",
+        answer:
+          "Yes. The revised clause 552.238-116 lets GSA extend the term of an FSS contract for up to 5 years at a time, with no limit on the number of times the option may be exercised, on 30 days' written notice. The old clause allowed three 5-year options after the base period — a 20-year maximum — after which a contractor had to win a new contract to stay on the Schedule. The new clause applies to the FSS contract itself, not to orders or BPAs placed against it.",
+      },
+      {
+        question: "Does the new AI clause apply to my contract?",
+        answer:
+          "Only if a two-part test is met: in performance of the order, BPA, or contract, the Government is procuring a system where LLM functionality is a material feature, and Government Data will be submitted directly to or produced by the LLM. If LLM use is limited to your internal business systems, or the LLM feature is incidental to the commercial product being procured, the clause imposes no obligation unless the contracting officer says otherwise.",
+      },
+      {
+        question: "Do I have to certify my products as domestic end products?",
+        answer:
+          "No. Clause 552.238-130 is voluntary — you may certify listed products as FSS domestic end products, but nothing requires it. Treat a certification as a serious step, not a marketing badge: it is a material representation of fact, and a knowingly false certification can bring remedies under the False Claims Act. OMB clearance for the information collection is still pending, and until it arrives GSA will not enforce the clause or share the data, so no one may rely on a certification or its absence. Accepting the mass modification does not certify anything by itself.",
+      },
+      {
+        question: "What changed for SIN 561210FAC and SIN 54151HACS?",
+        answer:
+          "Under SIN 561210FAC (Facilities Support Services), the HVAC Maintenance subgroup is removed — HVAC maintenance is no longer a standalone offering, and GSA will not award MAS contracts to offerors only offering services such as janitorial, plumbing, electrical, or HVAC maintenance that complete facilities maintenance contractors can perform. Under SIN 54151HACS (Highly Adaptive Cybersecurity Services), the voluntary Incident Response subgroup is phased out at the end of fiscal year 2027, September 30, 2027; contractors in that subgroup who do not hold the Incident Handling and Event Management subgroup may evaluate eligibility and request placement in it.",
+      },
+      {
+        question: "When do the Refresh 34 changes take effect for orders?",
+        answer:
+          "The refresh's changes apply to all new task and delivery orders issued after the modification's effective date, including BPA calls under existing BPAs. Orders issued before the effective date remain governed by the terms and conditions in effect at the time of award. The issued SF30 does not print a single calendar effective date for the mass modification; the nearest primary dates are the GSAR Part 538 deviation effective November 30, 2026, and the GSAR Part 552 effective date of October 19, 2026.",
+      },
+      {
+        question: "How do I accept the mass modification?",
+        answer:
+          "Through the Mass Mod Portal at mcm.fas.gsa.gov. Your authorized negotiator logs in with a FAS ID and multi-factor authentication, reviews the modification, and signs it electronically. Do not use eOffer/eMod for this — that system is for contractor-initiated modifications, such as adding a SIN or changing prices. The modification must be accepted no later than 90 days after issuance, and GSA's guidance frames the clock as 90 days from receipt — check your own notice for the date that applies to your contract.",
+      },
+    ],
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPostMeta | undefined {

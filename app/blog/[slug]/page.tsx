@@ -10,6 +10,7 @@ import EightAContent from "@/lib/blog/posts/8a-certification";
 import ViasatSdnContent from "@/lib/blog/posts/viasat-sdn-backbone-mission-operations-center";
 import NasaClps2Content from "@/lib/blog/posts/nasa-clps-2-lunar-delivery-contracts";
 import SbaVeteranContractingGoal10PercentContent from "@/lib/blog/posts/sba-veteran-contracting-goal-10-percent";
+import MasRefresh34Content from "@/lib/blog/posts/gsa-mas-refresh-34";
 
 export const dynamicParams = false;
 
@@ -22,6 +23,7 @@ const COMPONENTS: Record<string, React.ComponentType> = {
   "viasat-sdn-backbone-mission-operations-center": ViasatSdnContent,
   "nasa-clps-2-lunar-delivery-contracts": NasaClps2Content,
   "sba-veteran-contracting-goal-10-percent": SbaVeteranContractingGoal10PercentContent,
+  "gsa-mas-refresh-34": MasRefresh34Content,
 };
 
 export async function generateStaticParams() {
