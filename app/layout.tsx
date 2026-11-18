@@ -43,6 +43,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  other: {
+    "google-adsense-account": "ca-pub-7375069227835841",
+  },
 };
 
 function Footer() {
