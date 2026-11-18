@@ -1,6 +1,7 @@
 OWNERDOMAIN=fedtalentusa.com
 MANAGERDOMAIN=themoneytizer.com
 INVENTORYPARTNERDOMAIN=pubx.ai
+google.com, pub-7375069227835841, DIRECT, f08c47fec0942fa0
 themoneytizer.com,133603,DIRECT
 improvedigital.com, 1602_133603, DIRECT
 improvedigital.com, 1033_133603, DIRECT
