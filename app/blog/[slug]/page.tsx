@@ -11,6 +11,7 @@ import ViasatSdnContent from "@/lib/blog/posts/viasat-sdn-backbone-mission-opera
 import NasaClps2Content from "@/lib/blog/posts/nasa-clps-2-lunar-delivery-contracts";
 import SbaVeteranContractingGoal10PercentContent from "@/lib/blog/posts/sba-veteran-contracting-goal-10-percent";
 import MasRefresh34Content from "@/lib/blog/posts/gsa-mas-refresh-34";
+import SewipContractContent from "@/lib/blog/posts/sewip-contract";
 
 export const dynamicParams = false;
 
@@ -24,6 +25,7 @@ const COMPONENTS: Record<string, React.ComponentType> = {
   "nasa-clps-2-lunar-delivery-contracts": NasaClps2Content,
   "sba-veteran-contracting-goal-10-percent": SbaVeteranContractingGoal10PercentContent,
   "gsa-mas-refresh-34": MasRefresh34Content,
+  "sewip-contract": SewipContractContent,
 };
 
 export async function generateStaticParams() {

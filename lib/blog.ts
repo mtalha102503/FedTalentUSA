@@ -464,6 +464,63 @@ export const blogPosts: BlogPostMeta[] = [
       },
     ],
   },
+  {
+    slug: "sewip-contract",
+    title: "Navy SEWIP Contract 2026: $7.13B Award, 28 Firms, and What It Means for Vendors",
+    excerpt:
+      "The Navy awarded 28 firms a combined $7,125,820,000 multiple-award contract for the SEWIP Family of Systems on November 19, 2026 — a potential 10-year vehicle running through November 2036. The full awardee list, what the ceiling does and does not mean, and how vendors position for task orders.",
+    datePublished: "2026-11-21",
+    dateModified: "2026-11-21",
+    readingMinutes: 10,
+    tags: ["SEWIP", "Navy Contracts", "Federal Contracts"],
+    faqs: [
+      {
+        question: "What is SEWIP?",
+        answer:
+          "SEWIP is the Surface Electronic Warfare Improvement Program, the Navy's program for upgrading the AN/SLQ-32 electronic warfare system on surface ships in blocks. The system performs early detection, signal analysis, threat warning, and protection from anti-ship missiles on Navy, Coast Guard, and allied ships. Block 2 improved electronic support; Block 3 adds an electronic attack capability, designated AN/SLQ-32(V)7.",
+      },
+      {
+        question: "Who won the SEWIP contract?",
+        answer:
+          "28 firms won spots on the multiple-award contract, announced November 19, 2026. They range from the large primes — Lockheed Martin, Northrop Grumman, Raytheon, Leidos, BAE Systems, CACI, HII Mission Technologies, Amentum, ManTech, and both General Dynamics businesses — to smaller specialists such as Aeronix, Distributed Spectrum, Simventions, and PCI Aviation. 11 of the 28 are small businesses. The full list, with contract numbers, is in the table above.",
+      },
+      {
+        question: "How much is the SEWIP contract really worth?",
+        answer:
+          "$7,125,820,000 is the combined ceiling — the maximum value of all task orders that can be placed under the vehicle — not money spent or obligated. The announcement obligates no funds at award and gives no per-firm allocation. Each awardee's actual revenue depends on the task orders it wins over the life of the contract.",
+      },
+      {
+        question: "When does work under the SEWIP contract run through?",
+        answer:
+          "If all options are exercised, work will continue through November 2036. The announcement does not state an ordering period, a start date, or the option structure, so no more precise schedule can be published from the award notice.",
+      },
+      {
+        question: "Was the SEWIP contract a small-business set-aside?",
+        answer:
+          "No. The solicitation carried no set-aside and was competed full and open through SAM.gov and the PIEE Solicitation Module, drawing 31 offers. 11 of the 28 awardees are small businesses that won in open competition.",
+      },
+      {
+        question: "How can a firm that is not on the vehicle participate?",
+        answer:
+          "Through subcontracting or teaming with one of the 28 awardees. That is general practice for multiple-award vehicles — the Navy did not state a subcontracting route for this vehicle in the announcement. Firms should approach awardees whose work shares match their capability, and watch SAM.gov and FPDS for the first task orders to see which teams are winning.",
+      },
+      {
+        question: "What is SEWIP Block 3?",
+        answer:
+          "Block 3 is the electronic attack increment of SEWIP, designated AN/SLQ-32(V)7. It adds an active electronic attack capability — using radio-frequency energy to jam or deceive threats — to the passive detection capability of the earlier blocks. Northrop Grumman is the Block 3 prime. The first Block 3 system was installed on the destroyer USS Pinckney (DDG-91) in 2023, and in March 2026 the Navy ordered up to nine additional Block 3 systems, including the first shipset for an aircraft carrier.",
+      },
+      {
+        question: "What is the Air Force propulsion award announced the next day?",
+        answer:
+          "On November 20, 2026, the Air Force awarded a cumulative maximum ceiling of $16,100,000,000 in indefinite-delivery/indefinite-quantity contracts for advanced propulsion enterprise work, running through November 2041. Breaking Defense reported 58 vendors; the published Department of War text names 57 firms. Each awardee received $1,000 at award — $58,000 in fiscal 2027 research, development, test and evaluation funds obligated in total.",
+      },
+      {
+        question: "Where do I watch for SEWIP task orders?",
+        answer:
+          "On SAM.gov and FPDS. Task orders under the vehicle will appear as award notices against the individual contract numbers (N6175027D1401 through N6175027D1428) or the parent solicitation N00024-26-R-5504. The first task orders will show which firms are actually winning work and what the Navy is buying first.",
+      },
+    ],
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPostMeta | undefined {
